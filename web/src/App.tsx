@@ -3,6 +3,7 @@ import {useDojo} from './DojoContext';
 import {useComponentValue} from "@dojoengine/react";
 import {Direction} from './dojo/createSystemCalls'
 import {Utils} from '@dojoengine/core';
+import { Provider, Account, ec } from "starknet";
 
 function App() {
     const {
