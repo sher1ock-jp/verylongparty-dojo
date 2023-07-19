@@ -27,7 +27,6 @@ export function createSystemCalls(
         console.log("Moved ", direction)
       };
 
-
     return {
         spawn,
         move

@@ -4,12 +4,13 @@ import { defineComponent, Type as RecsType, World } from "@latticexyz/recs";
 
 export function defineContractComponents(world: World) {
   return {
-    Moves: (() => {
-      const name = "Moves";
+    User: (() => {
+      const name = "User";
       return defineComponent(
         world,
         {
-          remaining: RecsType.Number,
+          userPosition: RecsType.Number,
+          userQuestStatus: RecsType.Boolean,
         },
         {
           metadata: {
@@ -18,41 +19,17 @@ export function defineContractComponents(world: World) {
         }
       );
     })(),
-    Position: (() => {
-      const name = "Position";
+    Square: (() => {
+      const name = "Square";
       return defineComponent(
         world,
         {
-          x: RecsType.Number,
-          y: RecsType.Number,
-        },
-        {
-          metadata: {
-            name: name,
-          },
-        }
-      );
-    })(),
-    AuthStatus: (() => {
-      const name = "AuthStatus";
-      return defineComponent(
-        world,
-        {
-          is_authorized: RecsType.Boolean,
-        },
-        {
-          metadata: {
-            name: name,
-          },
-        }
-      );
-    })(),
-    AuthRole: (() => {
-      const name = "AuthRole";
-      return defineComponent(
-        world,
-        {
-          id: RecsType.Number,
+          squareId: RecsType.Number,
+          squareCreater: RecsType.String,
+          squareDescription: RecsType.String,
+          squareImageUrl: RecsType.String,
+          squareQuestAddress: RecsType.String,
+          squareQuestDescription: RecsType.String,
         },
         {
           metadata: {
