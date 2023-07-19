@@ -49,7 +49,38 @@ body {
 
 .wallet-area {
   position: absolute;
-  top: 20px;
-  right: 10px;
-  z-index: 999; /* 追加 */
+  top: 300px;
+  right: 300px;
+  z-index: 999; 
+}
+
+.action-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999; 
+}
+
+.game-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.game-start button {
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #FFF;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-start button:hover {
+  background-color: #DDD;
 }
