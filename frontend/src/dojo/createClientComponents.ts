@@ -7,7 +7,7 @@ export type ClientComponents = ReturnType<typeof createClientComponents>;
 export function createClientComponents({ contractComponents }: SetupNetworkResult) {
     return {
         ...contractComponents,
-        User: overridableComponent(contractComponents.User),
+        Player: overridableComponent(contractComponents.Player),
         // Square: overridableComponent(contractComponents.Square)
     };
 }

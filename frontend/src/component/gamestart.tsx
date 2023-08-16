@@ -1,11 +1,11 @@
 import { useDojo } from '../DojoContext';
 
 const GameStart = () => {
-  const { systemCalls: { gameStart } } = useDojo();
+  const { systemCalls: { mapCreate } } = useDojo();
 
   const handleStartGame = () => {
-    gameStart(); // gameStartを実行する
-    alert("Game Start!");
+    mapCreate(); 
+    console.log("Game Start!");
   };
 
   return (

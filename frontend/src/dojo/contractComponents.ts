@@ -4,11 +4,13 @@ import { defineComponent, Type as RecsType, World } from "@latticexyz/recs";
 
 export function defineContractComponents(world: World) {
   return {
-    User: (() => {
-      const name = "User";
+    Player: (() => {
+      const name = "Player";
       return defineComponent(
         world,
         {
+          playerId: RecsType.String,
+          playerBalance: RecsType.Number,
           userPosition: RecsType.Number,
           userQuestStatus: RecsType.Boolean,
         },
@@ -19,11 +21,13 @@ export function defineContractComponents(world: World) {
         }
       );
     })(),
+    
     Square: (() => {
       const name = "Square";
       return defineComponent(
         world,
         {
+          gameId: RecsType.Number,
           squareId: RecsType.Number,
           squareCreater: RecsType.String,
           squareDescription: RecsType.String,
@@ -38,5 +42,23 @@ export function defineContractComponents(world: World) {
         }
       );
     })(),
+
+    Map: (() => {
+      const name = "Map";
+      return defineComponent(
+        world,
+        {
+          gameId: RecsType.Number,
+          mapId: RecsType.Number,
+          mapName: RecsType.Number,
+        },
+        {
+          metadata: {
+            name: name,
+          },
+        }
+      );
+    })(),
+
   };
 }
